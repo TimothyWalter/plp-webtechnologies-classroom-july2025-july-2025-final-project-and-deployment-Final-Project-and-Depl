@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — AgroSphere</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">AgroSphere</a>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggleContact">☰</button>
+      <nav class="primary-nav" id="primaryNavContact">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p>Have a project in mind? Send us a message.</p>
+    <form id="contactForm" class="contact-form" novalidate>
+      <label>Name<input type="text" name="name" id="name" required></label>
+      <label>Email<input type="email" name="email" id="email" required></label>
+      <label>Subject<input type="text" name="subject" id="subject"></label>
+      <label>Message<textarea name="message" id="message" rows="6" required></textarea></label>
+      <label class="consent"><input type="checkbox" id="consent"> I agree to be contacted.</label>
+      <button class="btn" type="submit">Send message</button>
+      <div id="formMsg" aria-live="polite"></div>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>AgroSphere</strong><p>Building tools for smarter farms.</p></div>
+      <div><h4>Quick links</h4><nav class="footer-nav"><a href="index.html">Home</a><a href="about.html">About</a></nav></div>
+      <div><h4>Contact</h4><p>hello@agrosphere.example</p></div>
+    </div>
+    <div class="copyright">© <span id="year4"></span> AgroSphere</div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

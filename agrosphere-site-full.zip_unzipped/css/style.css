@@ -1,0 +1,32 @@
+:root{--maxw:1100px;--accent:#2b7a4b;--muted:#666}
+*{box-sizing:border-box}html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+.container{max-width:var(--maxw);margin:0 auto;padding:1rem}
+.site-header{background:#fff;border-bottom:1px solid #eee}
+.nav-container{display:flex;align-items:center;justify-content:space-between;padding:0.75rem}
+.logo{font-weight:700;text-decoration:none;color:var(--accent)}
+.primary-nav{display:flex;gap:1rem}
+.primary-nav a{text-decoration:none;color:#222}
+.nav-toggle{display:none;border:0;background:transparent;font-size:1.25rem}
+.hero{background:linear-gradient(180deg,#f7f9f7,#fff);padding:3rem 0;text-align:center}
+.hero h1{margin:0 0 0.5rem;font-size:clamp(1.6rem,3vw,2.4rem)}
+.hero p{color:var(--muted)}
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none}
+.btn.ghost{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));align-items:start}
+.feature-card, .card, .service-card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(20,20,20,0.04)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;padding:2rem 0}
+.team-card img{width:100%;height:200px;object-fit:cover;border-radius:6px}
+.site-footer{background:#fafafa;padding:2rem 0;margin-top:2rem;border-top:1px solid #eee}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.contact-form{max-width:700px}
+.contact-form label{display:block;margin-bottom:0.6rem}
+.contact-form input,.contact-form textarea{width:100%;padding:0.6rem;border:1px solid #ddd;border-radius:6px}
+.contact-form .consent{display:flex;align-items:center;gap:0.5rem}
+#formMsg{margin-top:0.6rem}
+@media (max-width:900px){
+  .primary-nav{position:fixed;right:0;top:0;height:100vh;width:220px;background:#fff;transform:translateX(120%);flex-direction:column;padding:2rem;gap:1rem;box-shadow:-6px 0 24px rgba(0,0,0,0.08)}
+  .primary-nav.open{transform:translateX(0)}
+  .nav-toggle{display:block}
+}
+[data-animate]{opacity:0;transform:translateY(12px);transition:opacity 450ms ease,transform 450ms ease}
+[data-animate].in-view{opacity:1;transform:translateY(0)}
